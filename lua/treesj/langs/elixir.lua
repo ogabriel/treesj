@@ -2,8 +2,8 @@ local lang_utils = require('treesj.langs.utils')
 local utils = require('treesj.utils')
 
 return {
-  array = lang_utils.set_preset_for_list(),
-  hash = lang_utils.set_preset_for_list(),
+  list = lang_utils.set_preset_for_list(),
+  map = lang_utils.set_preset_for_list(),
   method_parameters = lang_utils.set_preset_for_args(),
   argument_list = lang_utils.set_preset_for_args({
     both = {
