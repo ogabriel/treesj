@@ -15,6 +15,7 @@ M.configured_langs = {
   'perl',
   'php',
   'ruby',
+  'elixir',
   'go',
   'java',
   'pug',
