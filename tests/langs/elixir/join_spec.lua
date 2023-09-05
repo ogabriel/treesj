@@ -10,9 +10,9 @@ local data = {
     mode = MODE,
     lang = LANG,
     desc = 'lang "%s", node "list", preset default',
-    cursor = { 2, 17 },
-    expected = { 4, 11 },
-    result = { 1, 8 },
+    cursor = { 7, 3 },
+    expected = { 1, 2 },
+    result = { 1, 2 },
   },
 }
 

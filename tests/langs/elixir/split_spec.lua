@@ -14,6 +14,15 @@ local data = {
     expected = { 4, 10 },
     result = { 1, 7 },
   },
+  {
+    path = PATH,
+    mode = MODE,
+    lang = LANG,
+    desc = 'lang "%s", node "map", preset default',
+    cursor = { 13, 15 },
+    expected = { 15, 20 },
+    result = { 16, 20 },
+  },
 }
 
 local treesj = require('treesj')
