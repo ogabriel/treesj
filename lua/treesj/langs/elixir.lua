@@ -2,8 +2,16 @@ local lang_utils = require('treesj.langs.utils')
 local utils = require('treesj.utils')
 
 return {
-  list = lang_utils.set_preset_for_list(),
-  map = lang_utils.set_preset_for_list(),
+  list = lang_utils.set_preset_for_list({
+    split = {
+      last_separator = false,
+    },
+  }),
+  map = lang_utils.set_preset_for_list({
+    split = {
+      last_separator = false,
+    },
+  }),
   method_parameters = lang_utils.set_preset_for_args(),
   argument_list = lang_utils.set_preset_for_args({
     both = {
@@ -32,11 +40,6 @@ return {
           tsj:child('}'):update_text('end')
         end
       end,
-    },
-  }),
-  string_array = lang_utils.set_preset_for_list({
-    split = {
-      last_separator = false,
     },
   }),
   body_statement = lang_utils.set_preset_for_non_bracket({
