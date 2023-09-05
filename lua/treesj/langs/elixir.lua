@@ -7,14 +7,8 @@ return {
       last_separator = false,
     },
   }),
-  map = lang_utils.set_preset_for_args({
-    both = {
-      non_bracket_node = true,
-    },
-    split = {
-      recursive_ignore = { 'subset' },
-    },
-  }),
+
+  map = lang_utils.set_preset_for_args(),
   --not working yet
   method_parameters = lang_utils.set_preset_for_args(),
   argument_list = lang_utils.set_preset_for_args({
