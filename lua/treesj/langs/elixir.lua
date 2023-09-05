@@ -10,6 +10,7 @@ return {
   map = lang_utils.set_preset_for_list({
     split = {
       last_separator = false,
+      recursive = true,
     },
   }),
   method_parameters = lang_utils.set_preset_for_args(),
@@ -20,14 +21,14 @@ return {
       end,
     },
   }),
-  block = lang_utils.set_preset_for_dict({
+  do_block = lang_utils.set_preset_for_dict({
     join = {
       separator = '',
       recursive = false,
       format_tree = function(tsj)
         if tsj:has_children({ 'do', 'end' }) then
-          tsj:child('do'):update_text('{')
-          tsj:child('end'):update_text('}')
+          tsj:child('do'):update_text('do: ')
+          tsj:child('end'):update_text('')
         end
       end,
     },
@@ -35,9 +36,9 @@ return {
       omit = { 'block_parameters' },
       separator = '',
       format_tree = function(tsj)
-        if tsj:has_children({ '{', '}' }) then
-          tsj:child('{'):update_text('do')
-          tsj:child('}'):update_text('end')
+        if tsj:has_children({ 'do: ', '' }) then
+          tsj:child('do: '):update_text('do')
+          tsj:child(''):update_text('end')
         end
       end,
     },
