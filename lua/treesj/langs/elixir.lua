@@ -7,12 +7,15 @@ return {
       last_separator = false,
     },
   }),
-  map = lang_utils.set_preset_for_dict({
+  map = lang_utils.set_preset_for_args({
+    both = {
+      non_bracket_node = true,
+    },
     split = {
-      space_in_brackets = false,
-      last_separator = false,
+      recursive_ignore = { 'subset' },
     },
   }),
+  --not working yet
   method_parameters = lang_utils.set_preset_for_args(),
   argument_list = lang_utils.set_preset_for_args({
     both = {
