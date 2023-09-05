@@ -7,10 +7,10 @@ return {
       last_separator = false,
     },
   }),
-  map = lang_utils.set_preset_for_list({
+  map = lang_utils.set_preset_for_dict({
     split = {
+      space_in_brackets = false,
       last_separator = false,
-      recursive = true,
     },
   }),
   method_parameters = lang_utils.set_preset_for_args(),
