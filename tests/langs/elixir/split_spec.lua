@@ -21,7 +21,7 @@ local data = {
     desc = 'lang "%s", node "map", preset default',
     cursor = { 13, 15 },
     expected = { 15, 20 },
-    result = { 16, 20 },
+    result = { 18, 23 },
   },
 }
 
